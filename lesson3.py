@@ -1,20 +1,10 @@
-input_string = input('Введите что нибудь: ')
-initial_string = "Это строка в которую {} новую строку".format(input_string)
+n1 = int(input("Введите целое число: "))
+n2 = 0
 
-print(initial_string)
+while n1 > 0:
+    digit = n1 % 10
+    n1 = n1 // 10
+    n2 = n2 * 10
+    n2 = n2 + digit
 
-initial_string = initial_string.replace(input_string, 'замена в строке')
-
-print(initial_string)
-
-print(len(initial_string))
-
-if initial_string.find('строка') != -1:
-    print('Да')
-else:
-    print('Нет')
-
-
-a = int(input('D:'))
-a = ((a % 10) * 100) + (((a // 10) % 10) * 10) + (a // 100)
-print(a)
+print('"Обратное" ему число:', n2)
